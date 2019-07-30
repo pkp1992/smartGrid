@@ -1,0 +1,409 @@
+@import "./smart-grid.less";
+@import "./base.less";
+
+html {
+  font-size: 10px;
+  font-family: "Roboto Slab";
+}
+.reset();
+
+// .degubGrid {
+//   .debug(rgba(0, 0, 0, 0.1), 1px solid #ff0);
+// }
+
+.wrapper {
+  .wrapper();
+}
+
+header {
+  width: 100%;
+  background: url("../img/header.jpg") top center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  .wrapper {
+    .header {
+      .row-flex();
+      .col();
+      min-height: 80vh;
+      flex-direction: column;
+      justify-content: space-between;
+      &-menu {
+        padding-top: 30px;
+        .row-flex();
+        justify-content: space-between;
+        align-items: center;
+        &_logo {
+          .col();
+          width: 260px;
+          .xxs(width, 150px);
+        }
+        &_nav {
+          .col();
+          font-size: 3rem;
+          color: @color_black;
+          &:hover {
+            cursor: pointer;
+            color: @color_white;
+          }
+        }
+      }
+      &-block {
+        color: @color_white;
+        text-align: center;
+        small {
+          .big-block({font-size: 6rem;});
+          font-size: 6vmax;
+        }
+        h1 {
+          .big-block({font-size: 7rem;});
+          .xs-block({font-size: 5rem;});
+          word-break: break-word;
+          font-size: 7.2vmax;
+          font-weight: 700;
+        }
+        p {
+          .size(6);
+          .size-md(10);
+          margin: 0 auto;
+          font-family: "Raleway", sans-serif;
+          font-size: 2rem;
+          font-weight: 200;
+          line-height: 1.5;
+        }
+      }
+      &-button {
+        .row-flex;
+        .md-block({margin-bottom: 25px; margin-top: 10px;});
+        justify-content: center;
+        &_btn {
+          padding: 14px 16px;
+          text-decoration: none;
+          color: @color_white;
+          font-size: 2rem;
+        }
+        .more {
+          background-color: @color_green;
+        }
+        .download {
+          margin-left: 15px;
+          background-color: @color_red;
+          .xxs-block({margin-left: 0; margin-top: 15px; padding: 14px 25px;});
+        }
+      }
+    }
+  }
+}
+
+.feat {
+  .featItems {
+    .row-flex();
+    padding: 5rem 0;
+    justify-content: space-around;
+  }
+  &_item {
+    .col();
+    .size(4);
+    .size-md(6);
+    .size-xs(10);
+    .xs-block({margin-top: 15px;});
+    text-align: center;
+    color: @color_grey;
+    i {
+      font-size: 4rem;
+    }
+    h4 {
+      font-size: 2.4rem;
+      margin: 10px 0px;
+    }
+    p {
+      font-family: "Raleway", sans-serif;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+#about {
+  background: url("../img/advaadventure.jpg") center center no-repeat;
+  background-size: cover;
+  .adventure {
+    .row-flex();
+    &_block {
+      background-color: rgba(128, 215, 247, 0.66);
+      color: @color_white;
+      padding: 45px 30px;
+      .col();
+      .size(6);
+      .shift-left(6);
+      .size-md(10);
+      .md-block({.shift-left(1) ;});
+      h3 {
+        font-size: 4vmax;
+        margin: 15px;
+        .big-block({font-size: 4rem;});
+      }
+      h5 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 2rem;
+      }
+      &_box {
+        margin-top: 30px;
+        .row-flex();
+        justify-content: center;
+        &__item {
+          .col();
+          .size(6);
+          .size-md(6);
+          .md-block({margin-top: 15px;});
+
+          .size-xs(10.5);
+          text-align: center;
+          border: 1px solid @color_white;
+          h5 {
+            font-size: 2.5rem;
+            margin: 2rem;
+          }
+          span {
+            display: block;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#travel {
+  .journey {
+    padding-top: 30px;
+    .row-flex();
+    justify-content: space-around;
+    &_block {
+      color: @color_grey;
+      margin-bottom: 30px;
+      h2 {
+        .big-block({font-size: 4rem;});
+        font-size: 4vmax;
+        margin-bottom: 20px;
+      }
+      p {
+        display: block;
+        font-family: "Raleway", sans-serif;
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+      }
+      .col();
+      .size(6);
+      .size-md(10);
+      a {
+        padding: 14px 16px;
+        text-decoration: none;
+        color: @color_white;
+        font-size: 2rem;
+        background-color: @color_red;
+      }
+    }
+  }
+}
+
+.journal {
+  background: url("../img/retro_camera.jpeg") center center no-repeat;
+  background-size: cover;
+  .paper {
+    .row-flex();
+    color: @color_white;
+    &_block {
+      .col();
+      padding: 4rem 2rem;
+      background-color: rgba(128, 215, 247, 0.66);
+      .size(6);
+      .shift-right(6);
+      .size-md(12);
+      .size-xs(12);
+      .md-block({.shift-right(0) ;});
+      span {
+        display: block;
+        font-family: "Raleway", sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 2.4rem;
+        margin-bottom: 15px;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+        font-style: italic;
+        font-size: 1.6rem;
+        line-height: 2;
+        font-weight: 300;
+      }
+      h6 {
+        font-size: 2.4rem;
+        font-weight: 100;
+        margin: 15px 0;
+      }
+      small {
+        font-size: 1.4rem;
+        line-height: 2;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.client {
+  padding: 25px 0px;
+  &_block {
+    .row-flex();
+    justify-content: space-around;
+    &__item {
+      .col();
+      .size(2);
+      .size-md(4);
+      .size-xs(6);
+    }
+  }
+}
+
+.feedback {
+  background: linear-gradient(rgba(33, 37, 43, 0.6), rgba(33, 37, 43, 0.6)),
+    url("../img/feedback.jpeg");
+  padding: 50px 0;
+  &_block {
+    .row-flex();
+    &_form {
+      .col();
+      .size(7);
+      .size-md(10);
+      .size-xs(10);
+      color: @color_white;
+      h3 {
+        font-size: 3.3rem;
+        padding-bottom: 40px;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.7rem;
+        padding-bottom: 20px;
+        font-weight: 300;
+      }
+      &_group {
+        input {
+          .size(6);
+          .size-md(8);
+          .size-sm(10);
+          .size-xs(12);
+          height: 40px;
+          margin-bottom: 10px;
+          border: 1px solid #cccccc;
+          padding: 4px 12px;
+          outline: none;
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          font-size: 1.6rem;
+        }
+      }
+      &_btn {
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: @color_white;
+        font-size: 2rem;
+        background-color: @color_red;
+        border: none;
+      }
+      #error {
+        font-size: 2rem;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.site-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+}
+
+.navigation {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background: #333332;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+  &_list {
+    li {
+      a {
+        display: block;
+        color: #b3b3b1;
+        padding: 15px 30px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(0%);
+}
+
+
+.footer {
+  background-color: rgba(36, 50, 59, 1);
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+  &_block {
+    .row-flex();
+    justify-content: space-between;
+    align-items: center;
+    &_logo{
+      color: @color_white;
+      .col();
+      .size(6);
+      .size-xs(12);
+      h3 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+    &_social {
+      .row-flex();
+      justify-content: flex-end;
+      padding-right: 30px;
+      .size(6);
+      .size-xs(12);
+      .xs-block({
+        margin-top: 40px;
+      });
+      a {
+        .col();
+        text-decoration: none;
+        i {
+          font-size: 3rem;
+          color: @color_white;
+        }
+      }
+    }
+  }
+}
