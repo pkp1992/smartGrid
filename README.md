@@ -1,1 +1,1 @@
-# smartGrid
+# smartGridJs
